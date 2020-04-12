@@ -1,8 +1,8 @@
 {
-  "name": "jsonresume-theme-macchiato",
+  "name": "jsonresume-theme-macchiato-ibic",
   "version": "1.0.0",
-  "description": "Simple theme for JSON Resume. Based on caffeine-theme.",
-  "author": "Alessandro Biondi",
+  "description": "Simple theme for JSON Resume. Based on macchiato, which based on caffeine-theme.",
+  "author": "Alessandro Biondi (Fork created by HOU Tianze)",
   "scripts": {
     "test": "jest",
     "prepublishOnly": "npm run pretty && npm run lint && npm run test",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/biosan/jsonresume-theme-macchiato"
+    "url": "https://github.com/houtianze/jsonresume-theme-macchiato-ibic"
   },
   "license": "MIT",
   "dependencies": {
