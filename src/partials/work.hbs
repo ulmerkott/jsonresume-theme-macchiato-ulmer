@@ -4,7 +4,12 @@
 
     {{#each resume.work}}
       <section class="item">
-        {{> section-header name=this.company }}
+        {{#if name}}
+          {{> section-header name=this.name}}
+        {{/if}}
+        {{#if company}}
+          {{> section-header name=this.company }}
+        {{/if}}
 
         {{#if position}}
           <h4>{{position}}</h4>
