@@ -25,6 +25,7 @@ describe('jest-image-snapshot usage with an image received from puppeteer', () =
       fullPage: true,
       omitBackground: true,
     });
+    // fs.writeFile('/tmp/resume.png', image)
 
     expect(image).toMatchImageSnapshot();
   });
