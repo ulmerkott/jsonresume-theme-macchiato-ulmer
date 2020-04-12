@@ -4,7 +4,7 @@ Macchiato it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Bo
 
 ## Why?
 
-I wanted to build my own resume theme, so I decided to start from a theme I like a lot and tring to make it a bit more personal.
+I wanted to build my own resume theme, so I decided to start from a theme I like a lot and trying to make it a bit more personal.
 
 I also wanted I simple environment, so I used the boilerplate provided by JSON Resume instead of using the awesome work done by [kelyvin](https://github.com/kelyvin/) for it's Caffeine Theme. If you are looking for a more complete environment take a look at the caffine theme.
 
@@ -24,6 +24,12 @@ I also wanted I simple environment, so I used the boilerplate provided by JSON R
 - Add tags to projects and skills
 - Switch from `UPPERCASE` to `Capitalize` on most text
 
+## Changes from Macchiato Theme
+
+Mainly on `projects`:
+
+- Use `name` instead of `title` as per `jsonresume` schema
+- Add `descriptions` sections for each project
 
 ## Usage
 
