@@ -1,6 +1,6 @@
 # Macchiato Theme! ☕️+🥛
 
-Macchiato it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) and [Caffeine Theme](https://github.com/kelyvin/jsonresume-theme-caffeine).
+(This is a forked and slightly modified version of) Macchiato it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) and [Caffeine Theme](https://github.com/kelyvin/jsonresume-theme-caffeine).
 
 ## Why?
 
@@ -29,7 +29,7 @@ I also wanted I simple environment, so I used the boilerplate provided by JSON R
 Mainly on `projects`:
 
 - Use `name` instead of `title` as per `jsonresume` schema
-- Add `descriptions` sections for each project
+- Add `description` sections for each project
 
 ## Usage
 
