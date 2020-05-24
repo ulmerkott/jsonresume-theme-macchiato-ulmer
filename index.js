@@ -17,7 +17,7 @@ handlebars.registerHelper({
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
-  formatDate: date => moment(date).format('MM/YYYY'),
+  formatDate: date => moment(date).format('YYYY-MM'),
   // lowercase: s => s.toLowerCas(),
 });
 
@@ -29,7 +29,6 @@ function render(resume) {
   const Handlebars = handlebarsWax(handlebars);
 
   Handlebars.partials(`${dir}/partials/**/*.{hbs,js}`);
-
   return Handlebars.compile(resumeTemplate)({
     style: `<style>${css}</style>`,
     resume,
