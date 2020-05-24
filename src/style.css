@@ -167,6 +167,7 @@ em {
 ul {
   margin: 10px 0 0;
   -webkit-padding-start: 25px;
+  list-style-type: circle;
 }
 
 ul li {
