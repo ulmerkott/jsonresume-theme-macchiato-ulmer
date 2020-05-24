@@ -1,6 +1,6 @@
 # Macchiato Theme! ☕️+🥛
 
-(This is a forked and slightly modified version of) Macchiato it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) and [Caffeine Theme](https://github.com/kelyvin/jsonresume-theme-caffeine).
+(This is a forked and slightly modified version of) Macchiato-ibic it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) and [Caffeine Theme](https://github.com/kelyvin/jsonresume-theme-caffeine).
 
 ## Why?
 
