@@ -17,7 +17,7 @@ handlebars.registerHelper({
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
-  formatDate: date => moment(date).format('YYYY-MM'),
+  formatDate: date => moment(date).format('MMM YYYY'),
   // lowercase: s => s.toLowerCas(),
 });
 
