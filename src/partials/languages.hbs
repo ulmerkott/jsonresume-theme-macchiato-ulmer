@@ -2,12 +2,10 @@
     <div class="container languages-container">
         {{> title value="Languages"}}
 
-        <ul class="minimal">
+        <div class="minimal flex-container">
             {{#each resume.languages}}
-                <li>
-                    <h6>{{language}} {{#if fluency}}<em>({{fluency}})</em>{{/if}}</h6>
-                </li>
+                <h6 class="main-skill skill">{{language}} {{#if fluency}}<em>({{fluency}})</em>{{/if}}</h6>
             {{/each}}
-        </ul>
+        </dif>
     </div>
 {{/if}}
