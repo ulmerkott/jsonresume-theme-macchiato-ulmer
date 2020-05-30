@@ -8,11 +8,11 @@
                     <h4 class="bold">{{name}}</h4>
                 {{/if}}
                 {{#if keywords.length}}
-                    <ul class="minimal">
+                    <div class="minimal flex-container">
                         {{#each keywords}}
-                            <li>{{.}}</li>
+                            <h6 class="main-skill skill">{{.}}</h6>
                         {{/each}}
-                    </ul>
+                    </div>
                 {{/if}}
             </section>
         {{/each}}
