@@ -260,15 +260,29 @@ p, li {
   font-size: 9px;
   list-style-type: none;
   padding-left: 0.6em;
-  margin-right: -2em;
+  margin-right: 0em;
   padding-right: 2em;
 }
 
 li {
-  border-left-style: solid;
-  border-width: 0.05rem;
+  border-left-style: solid #304357;
+  border-width: 1px;
   padding-bottom: 0.5em;
 }
+
+ul.highlights:before {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: relative;
+  border: 1px solid black;
+  top: 0;
+  left: -1em;
+  /* border-left-style: solid #304357; */
+  /* border-width: 1px; */
+  /* padding-bottom: 0.5em; */
+}
+
 
 blockquote {
   font-size: 11px;
@@ -329,7 +343,8 @@ ul.two-column li {
 .keyline {
   width: 100%;
   margin: 0em 0 0.5em;
-  border-top: 0.05rem solid #304357;
+  border-top: 0.5mm solid #304357;
+  transform: scaleY(0.33);
 }
 
 .pull-left {
@@ -338,6 +353,21 @@ ul.two-column li {
 
 .pull-right {
   float: right;
+}
+.col-container {
+  display: table;
+  width: 100%;
+  margin: 10px;
+}
+
+.col {
+  display: table-cell;
+  padding-inline-start: 0;
+}
+.col-keyline {
+  display: table-cell;
+  border-right: 0.5mm solid #31435721;
+  transform: scaleX(0.33);
 }
 
 .clearfix:after {
@@ -375,7 +405,7 @@ ul.two-column li {
 /* Layouts */
 .page {
   background: white;
-  width: 612px;
+  width: 40rem;
   min-height: 792px;
   display: block;
   margin: 0 auto;
@@ -394,7 +424,7 @@ ul.two-column li {
   float: left;
   width: 8.5em;
   margin-right: 1em;
-  margin-top: 0.5em;
+  margin-top: 0.53em;
   word-wrap: break-word;
 }
 

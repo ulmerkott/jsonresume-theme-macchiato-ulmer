@@ -28,11 +28,15 @@
         {{/if}}
 
         {{#if highlights.length}}
-          <ul>
-            {{#each highlights}}
+          <div class="col-container">
+            <div class="col-keyline">
+            </div>
+            <ul class="col">
+              {{#each highlights}}
               <li>{{.}}</li>
-            {{/each}}
-          </ul>
+              {{/each}}
+            </ul>
+          </div>
         {{/if}}
       </section>
     {{/each}}
