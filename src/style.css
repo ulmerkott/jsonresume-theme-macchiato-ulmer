@@ -206,8 +206,8 @@ h3 {
 }
 
 h3.bold {
-  font-weight: 400;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 h3.left {
@@ -219,7 +219,7 @@ h3.left {
 h4 {
   font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 h4.bold {
@@ -478,11 +478,17 @@ ul.two-column li {
 }
 
 .info-tag-container .fa {
-  font-size: 9px;
-  width: 12px;
+  font-size: 13px;
+  width: 9px;
   margin-right: 5px;
   text-align: center;
   vertical-align: middle;
+}
+
+/* There is no spoon */
+.info-tag-container .fa.fa-utensil-spoon {
+  font-size: 16px;
+  opacity: 0;
 }
 
 .info-tag-container .fa.fa-map-marker {
@@ -490,11 +496,11 @@ ul.two-column li {
 }
 
 .info-tag-container .fa.fa-mobile {
-  font-size: 15px;
+  font-size: 16px;
 }
 
-.info-tag-container .fa.fa-envelope-o {
-  font-size: 12px;
+.info-tag-container .fa.fa-envelope {
+  font-size: 10px;
 }
 
 .info-tag-container .fa.fa-desktop {
