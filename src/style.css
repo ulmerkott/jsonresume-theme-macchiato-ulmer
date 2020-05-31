@@ -142,16 +142,35 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* latin-ext */
+@font-face {
+  font-family: 'Fauna One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Fauna One'), local('FaunaOne-Regular'), url(https://fonts.gstatic.com/s/faunaone/v7/wlpzgwTPBVpjpCuwkuEB0EZKUCk.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fauna One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Fauna One'), local('FaunaOne-Regular'), url(https://fonts.gstatic.com/s/faunaone/v7/wlpzgwTPBVpjpCuwkuEB3kZK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html {
   background: white;
 }
 
 body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Fauna One", Helvetica, Arial, sans-serif;
   font-weight: 400;
   background: white;
   margin: 50px 0 100px;
-  letter-spacing: .3px;
+  letter-spacing: 0px;
   color: #39424B;
 }
 
@@ -218,7 +237,7 @@ h5.italic {
 }
 
 h6 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Fauna One", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 10px;
 }
@@ -240,20 +259,20 @@ a .fa-external-link {
 p, li {
   font-size: 9px;
   list-style-type: none;
-  padding-left: 10px;
+  padding-left: 0.6em;
   margin-right: -2em;
   padding-right: 2em;
 }
 
 li {
   border-left-style: solid;
-  border-width: thin;
+  border-width: 0.05rem;
   padding-bottom: 0.5em;
 }
 
 blockquote {
   font-size: 11px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Fauna One", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: italic;
   margin: 10px 25px;
