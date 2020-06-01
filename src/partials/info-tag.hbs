@@ -1,6 +1,12 @@
 <div class="info-tag-container">
     {{#if icon}}
-    <i class="fa {{icon}}"></i>
+    {{#if mapurl}}
+        <a href="{{mapurl}}" target="_blank">
+          <i class="fa {{icon}}"></i>
+        </a>
+    {{else}}
+          <i class="fa {{icon}}"></i>
+    {{/if}}
     {{/if}}
 
     {{#if url}}

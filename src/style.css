@@ -233,7 +233,11 @@ h5 {
 }
 
 h5.italic {
-  font-style: italic;
+    font-style: italic;
+    margin-bottom: -0.7em;
+    margin-left: 1em;
+    color: #3143578a;
+    font-size: 9px;
 }
 
 h6 {
@@ -269,20 +273,6 @@ li {
   border-width: 1px;
   padding-bottom: 0.5em;
 }
-
-ul.highlights:before {
-  content: '';
-  width: 0;
-  height: 100%;
-  position: relative;
-  border: 1px solid black;
-  top: 0;
-  left: -1em;
-  /* border-left-style: solid #304357; */
-  /* border-width: 1px; */
-  /* padding-bottom: 0.5em; */
-}
-
 
 blockquote {
   font-size: 11px;
@@ -346,6 +336,12 @@ ul.two-column li {
   border-top: 0.5mm solid #304357;
   transform: scaleY(0.33);
 }
+
+.keyline-highlights {
+    width: 75%;
+    margin: 0em 6em 0.5em;
+    border-top: 0.5mm solid #31435721;
+    transform: scaleY(0.33);}
 
 .pull-left {
   float: left;

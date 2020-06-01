@@ -11,7 +11,7 @@
     {{/if}}
 
     {{#if address}}
-        {{> info-tag text=this.address icon="fa-map-marker"}}
+        {{> info-tag text=this.address mapurl=(concat "https://www.google.com/maps/search/?api=1&query=\"" this.address " " this.city "\"") icon="fa-map-marker"}}
         {{> info-tag text=(concat this.code " " this.city) icon="fa-utensil-spoon"}}
     {{/if}}
 
