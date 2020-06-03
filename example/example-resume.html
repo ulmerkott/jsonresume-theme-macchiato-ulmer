@@ -1,0 +1,1157 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+        <title>Jane Q. Fullstacker</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+        <style>
+            /* Utils */
+            /*----- Colors -----*/
+            /*----- Fonts -----*/
+            /*----- Dimensions and sizes -----*/
+            /* Base */
+            @font-face {
+              font-family: 'Josefin Sans';
+              font-style: normal;
+              font-weight: 300;
+              src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Josefin Sans';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 300;
+              src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 400;
+              src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 700;
+              src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 300;
+              src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+            }
+            
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 700;
+              src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+            }
+            
+            /* cyrillic-ext */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1BkRl9xxA.woff2) format('woff2');
+              unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+            }
+            /* cyrillic */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bk1l9xxA.woff2) format('woff2');
+              unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            }
+            /* greek-ext */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1BkVl9xxA.woff2) format('woff2');
+              unicode-range: U+1F00-1FFF;
+            }
+            /* greek */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkpl9xxA.woff2) format('woff2');
+              unicode-range: U+0370-03FF;
+            }
+            /* vietnamese */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1BkZl9xxA.woff2) format('woff2');
+              unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+            }
+            /* latin-ext */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkdl9xxA.woff2) format('woff2');
+              unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Alegreya Sans SC';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Alegreya Sans SC Regular'), local('AlegreyaSansSC-Regular'), url(https://fonts.gstatic.com/s/alegreyasanssc/v9/mtGh4-RGJqfMvt7P8FUr0Q1j-Hf1Bkll9w.woff2) format('woff2');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            
+            /* latin-ext */
+            @font-face {
+              font-family: 'Marcellus';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Marcellus'), local('Marcellus-Regular'), url(https://fonts.gstatic.com/s/marcellus/v7/wEO_EBrOk8hQLDvIAF81WPoK7Es.woff2) format('woff2');
+              unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Marcellus';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Marcellus'), local('Marcellus-Regular'), url(https://fonts.gstatic.com/s/marcellus/v7/wEO_EBrOk8hQLDvIAF81VvoK.woff2) format('woff2');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            
+            /* latin-ext */
+            @font-face {
+              font-family: 'Fauna One';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Fauna One'), local('FaunaOne-Regular'), url(https://fonts.gstatic.com/s/faunaone/v7/wlpzgwTPBVpjpCuwkuEB0EZKUCk.woff2) format('woff2');
+              unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            }
+            /* latin */
+            @font-face {
+              font-family: 'Fauna One';
+              font-style: normal;
+              font-weight: 400;
+              font-display: swap;
+              src: local('Fauna One'), local('FaunaOne-Regular'), url(https://fonts.gstatic.com/s/faunaone/v7/wlpzgwTPBVpjpCuwkuEB3kZK.woff2) format('woff2');
+              unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            }
+            
+            html {
+              background: white;
+            }
+            
+            body {
+              font-family: "Fauna One", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              background: white;
+              margin: 50px 0 100px;
+              letter-spacing: 0px;
+              color: #39424B;
+            }
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              text-transform: none;
+              margin: 0;
+            }
+            
+            h1 {
+              font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
+              font-weight: 700;
+              font-size: 40px;
+              letter-spacing: 1px;
+            }
+            
+            h2 {
+              font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 16px;
+              letter-spacing: .5px;
+            }
+            
+            h3 {
+              font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-size: 18px;
+              letter-spacing: .4px;
+            }
+            
+            h3.bold {
+              font-weight: 700;
+              font-size: 12px;
+            }
+            
+            h3.left {
+              font-weight: 400;
+              font-size: 11px;
+              
+            }
+            
+            h4 {
+              font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 11px;
+            }
+            
+            h4.bold {
+              font-weight: 700;
+            }
+            
+            h5 {
+              font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 11px;
+            }
+            
+            h5.italic {
+                font-style: italic;
+                margin-bottom: -0.7em;
+                margin-left: 1em;
+                color: #3143578a;
+                font-size: 9px;
+            }
+            
+            h6 {
+              font-family: "Fauna One", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-size: 10px;
+            }
+            
+            a {
+              color: inherit;
+              text-decoration: inherit;
+            }
+            
+            a:hover {
+              color: #2895F1;
+            }
+            
+            a .fa-external-link {
+              font-size: 10px;
+              vertical-align: text-top;
+            }
+            
+            p, li {
+              font-size: 9px;
+              list-style-type: none;
+              padding-left: 0.6em;
+              margin-right: 0em;
+              padding-right: 2em;
+            }
+            
+            li {
+              border-left-style: solid #304357;
+              border-width: 1px;
+              padding-bottom: 0.5em;
+            }
+            
+            blockquote {
+              font-size: 11px;
+              font-family: "Fauna One", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-style: italic;
+              margin: 10px 25px;
+            }
+            
+            em {
+              color: #999;
+            }
+            
+            ul {
+              margin: 10px 0 0;
+              padding-inline-start: 1em;
+            }
+            
+            ul li {
+              padding-left: 0.6em;
+            }
+            
+            ul.minimal {
+              list-style: none;
+              padding: 0;
+            }
+            
+            ul.minimal li {
+              margin-bottom: 3px;
+              padding-left: 0;
+            }
+            
+            li.two-column {
+              border-style: none;
+            }
+            
+            ul.two-column {
+              -webkit-column-count: 2;
+              -webkit-column-gap: 28px;
+              column-count: 2;
+              column-gap: 28px;
+              list-style-type: none;
+              border-style: none;
+            }
+            
+            ul.two-column li {
+              padding-left: 0;
+            }
+            
+            @page {
+              size: A4;
+            }
+            
+            .container {
+              padding-top: 20px;
+            }
+            
+            .keyline {
+              width: 100%;
+              margin: 0em 0 0.5em;
+              border-top: 0.5mm solid #304357;
+              transform: scaleY(0.33);
+            }
+            
+            .keyline-highlights {
+                width: 75%;
+                margin: 0em 6em 0.5em;
+                border-top: 0.5mm solid #31435721;
+                transform: scaleY(0.33);}
+            
+            .pull-left {
+              float: left;
+            }
+            
+            .pull-right {
+              float: right;
+            }
+            .col-container {
+              display: table;
+              width: 100%;
+              margin: 10px;
+            }
+            
+            .col {
+              display: table-cell;
+              padding-inline-start: 0;
+            }
+            .col-keyline {
+              display: table-cell;
+              border-right: 0.5mm solid #31435721;
+              transform: scaleX(0.33);
+            }
+            
+            .clearfix:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            .profile-pic {
+              margin-top: -5px;
+              margin-right: 18px;
+            }
+            
+            .profile-pic img {
+              height: 4em;
+              width: 4em;
+              border-radius: 50%;
+              border: 0.2em solid #304357;
+            }
+            
+            .summary {
+              margin: 5px 0 5px;
+            }
+            
+            .sublink {
+              font-size: 70%;
+              font-weight: 200;
+              color: dimgray;
+            }
+            
+            .capitalize {
+              text-transform: capitalize;
+            }
+            
+            /* Layouts */
+            .page {
+              background: white;
+              width: 40rem;
+              min-height: 792px;
+              display: block;
+              margin: 0 auto;
+              border-top: 10px solid #304357;
+              padding: 36px 22px 30px 34px;
+              box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+            }
+            
+            .page:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            .left-column {
+              float: left;
+              width: 8.5em;
+              margin-right: 1em;
+              margin-top: 0.53em;
+              word-wrap: break-word;
+            }
+            
+            .right-column {
+              width: auto;
+              overflow: hidden;
+            }
+            
+            .item {
+              margin-bottom: 15px;
+            }
+            
+            .item:last-child {
+              margin-bottom: 0;
+            }
+            
+            @media print {
+              body {
+                margin: 0;
+              }
+            
+              .page {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 36px 0 30px;
+                box-shadow: none;
+              }
+            
+              .page .resume-header,
+              .page .resume-content {
+                padding: 0 22px 0 34px;
+              }
+            
+              .container {
+                page-break-inside: avoid;
+              }
+            
+              .work-container .item {
+                page-break-inside: avoid;
+              }
+            
+              .fa-external-link {
+                display: none;
+              }
+            }
+            
+            /* Components */
+            .info-tag-container {
+              margin-bottom: -0.2em;
+            }
+            
+            .info-tag-container .fa {
+              font-size: 13px;
+              width: 9px;
+              margin-right: 5px;
+              text-align: center;
+              vertical-align: middle;
+            }
+            
+            /* There is no spoon */
+            .info-tag-container .fa.fa-utensil-spoon {
+              font-size: 16px;
+              opacity: 0;
+            }
+            
+            .info-tag-container .fa.fa-map-marker {
+              font-size: 16px;
+            }
+            
+            .info-tag-container .fa.fa-mobile {
+              font-size: 16px;
+            }
+            
+            .info-tag-container .fa.fa-envelope {
+              font-size: 10px;
+            }
+            
+            .info-tag-container .fa.fa-desktop {
+              font-size: 11px;
+            }
+            
+            .info-tag-container .fa.fa-external-link {
+              width: auto;
+              font-size: inherit;
+              vertical-align: text-top;
+            }
+            
+            .info-tag-container .info-text {
+              font-size: 9px;
+              text-transform: none;
+              display: inline-block;
+              vertical-align: middle;
+            }
+            
+            .references-container .fa {
+              font-size: 14px;
+            }
+            
+            .education-container .location {
+              padding-bottom: 6px;
+              font-weight: 400;
+            }
+            
+            .education-container .specialization {
+              text-transform: none;
+              font-style: italic;
+            }
+            
+            .flex-container {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+            }
+            
+            .main-skill {
+              font-size: 9px;
+            }
+            
+            .skill {
+              margin: .20em;
+              padding: .15em;
+              background: #3143570d;
+              border-radius: 5px;
+            }
+            
+            .main-course {
+              font-size: 70%;
+            }
+            
+            .course {
+              margin: .20em;
+              padding: .15em;
+              background: #eaf4fc;
+              border-radius: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <main id="resume" class="page">
+            <header class="resume-header clearfix">
+                <div class="profile-header pull-left">
+                     <h1>Jane Q. Fullstacker</h1>
+
+                     <h2>Senior Developer</h2>
+
+                </div>
+                <div class="profile-pic pull-right">
+                    <img src="jane.png" alt="profile-pic">
+                </div>
+            </header>
+            <div class="resume-content">
+                <aside class="left-column">
+                    <div class="container about-container">
+                        <div class="title">
+                             <h3 class="left">Contact</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-envelope"></i>
+
+                             <h6 class="info-text">
+                            <a href="mailto:jdoe@onecoolstartup.io" target="_blank">
+                                jdoe@onecoolstartup.io
+                            </a>
+                        </h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-phone"></i>
+
+                             <h6 class="info-text">1-650-999-7777</h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-globe"></i>
+
+                             <h6 class="info-text">
+                            <a href="https://www.janeblogs.com" target="_blank">
+                                www.janeblogs.com
+                            </a>
+                        </h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-github"></i>
+
+                             <h6 class="info-text">
+                                             <a href="https://github.com/janeq-was-here" target="_blank">
+                                                 GitHub / janeq-was-here
+                                             </a>
+                                         </h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-twitter"></i>
+
+                             <h6 class="info-text">
+                                             <a href="https://twitter.com/janeq-was-here" target="_blank">
+                                                 Twitter / janeq-was-here
+                                             </a>
+                                         </h6>
+
+                        </div>
+                        </section>
+                        <div class="skills-container">
+                            <section class="container">
+                                <div class="title">
+                                     <h3 class="left">Web</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                 <h4 class="bold capitalize">advanced</h4>
+
+                                <div class="minimal flex-container">
+                                     <h6 class="main-skill skill">JavaScript</h6>
+
+                                     <h6 class="main-skill skill">HTML 5</h6>
+
+                                     <h6 class="main-skill skill">CSS</h6>
+
+                                     <h6 class="main-skill skill">LAMP</h6>
+
+                                     <h6 class="main-skill skill">MVC</h6>
+
+                                     <h6 class="main-skill skill">REST</h6>
+
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3 class="left">JavaScript</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                 <h4 class="bold capitalize">master</h4>
+
+                                <div class="minimal flex-container">
+                                     <h6 class="main-skill skill">Node.js</h6>
+
+                                     <h6 class="main-skill skill">Angular.js</h6>
+
+                                     <h6 class="main-skill skill">jQuery</h6>
+
+                                     <h6 class="main-skill skill">Bootstrap</h6>
+
+                                     <h6 class="main-skill skill">React.js</h6>
+
+                                     <h6 class="main-skill skill">Backbone.js</h6>
+
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3 class="left">Database</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                 <h4 class="bold capitalize">intermediate</h4>
+
+                                <div class="minimal flex-container">
+                                     <h6 class="main-skill skill">MySQL</h6>
+
+                                     <h6 class="main-skill skill">PostgreSQL</h6>
+
+                                     <h6 class="main-skill skill">NoSQL</h6>
+
+                                     <h6 class="main-skill skill">ORM</h6>
+
+                                     <h6 class="main-skill skill">Hibernate</h6>
+
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3 class="left">Cloud</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                 <h4 class="bold capitalize">intermediate</h4>
+
+                                <div class="minimal flex-container">
+                                     <h6 class="main-skill skill">AWS</h6>
+
+                                     <h6 class="main-skill skill">EC2</h6>
+
+                                     <h6 class="main-skill skill">RDS</h6>
+
+                                     <h6 class="main-skill skill">S3</h6>
+
+                                     <h6 class="main-skill skill">Azure</h6>
+
+                                     <h6 class="main-skill skill">Dropbox</h6>
+
+                                </div>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3 class="left">Project</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                 <h4 class="bold capitalize">beginner</h4>
+
+                                <div class="minimal flex-container">
+                                     <h6 class="main-skill skill">Agile</h6>
+
+                                     <h6 class="main-skill skill">TFS</h6>
+
+                                     <h6 class="main-skill skill">JIRA</h6>
+
+                                     <h6 class="main-skill skill">GitHub</h6>
+
+                                     <h6 class="main-skill skill">Unified Process</h6>
+
+                                     <h6 class="main-skill skill">MS Project</h6>
+
+                                </div>
+                            </section>
+                        </div>
+                        <div class="container languages-container">
+                            <div class="title">
+                                 <h3 class="left">Languages</h3>
+
+                                <div class="keyline"></div>
+                            </div>
+                            <div class="minimal flex-container">
+                                 <h6 class="main-skill skill">English </h6>
+
+                                 <h6 class="main-skill skill">Spanish </h6>
+
+                                </dif>
+                            </div>
+                            <div class="container interests-container">
+                                <div class="title">
+                                     <h3 class="left">Interests</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <section class="item">
+                                     <h4 class="bold">reading</h4>
+
+                                    <div class="minimal flex-container">
+                                         <h6 class="main-skill skill">mystery</h6>
+
+                                         <h6 class="main-skill skill">Agatha Christie</h6>
+
+                                         <h6 class="main-skill skill">John Grisham</h6>
+
+                                    </div>
+                                </section>
+                                <section class="item">
+                                     <h4 class="bold">hiking</h4>
+
+                                </section>
+                                <section class="item">
+                                     <h4 class="bold">yoga</h4>
+
+                                </section>
+                            </div>
+                </aside>
+                <div class="right-column">
+                    <div class="container summary-container">
+                        <div class="title">
+                             <h3>Summary</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <p class="summary"> <strong>Imaginary full-stack software developer with 6+ years industry experience</strong> specializing
+                            in cloud-driven web applications and middleware. A native of southern CA,
+                            Jane enjoys hiking, mystery novels, and the company of Rufus, her two year
+                            old beagle.</p>
+                    </div>
+                    <div class="container work-container">
+                        <div class="title">
+                             <h3>Work Experience</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                              <a href="https://area52.io/does-not-exist" target="_blank">
+                                  Area 52
+                              </a>
+                      </h3>
+
+                                 <h5 class="date pull-right">
+                              <span class="startDate">Sep 2013</span>
+                              <span class="endDate"> - Present</span>
+                      </h5>
+
+                            </div>
+                             <h4>Head Code Ninja</h4>
+
+                            <p class="summary">Development team manager for <a href="https://en.wikipedia.org/wiki/Vaporware"><strong>Quantum Diorama</strong></a>,
+                                a distributed molecular modeling and analysis suite for Linux and OS X.</p>
+                            <h5
+                            class="italic">Selected Highlights</h5>
+                                <div class="keyline-highlights"></div>
+                                <div class="col-container">
+                                    <div class="col-keyline"></div>
+                                    <ul class="col">
+                                        <li>Managed a 5-person development team</li>
+                                        <li>Accomplishment 2</li>
+                                        <li>Etc.</li>
+                                    </ul>
+                                </div>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                              <a href="https://en.wikipedia.org/wiki/Better_Off_Ted#Plot" target="_blank">
+                                  Veridian Dynamics
+                              </a>
+                      </h3>
+
+                                 <h5 class="date pull-right">
+                              <span class="startDate">Jul 2011</span>
+                              <span class="endDate"> - Aug 2013</span>
+                      </h5>
+
+                            </div>
+                             <h4>Principal Developer</h4>
+
+                            <p class="summary">Developer on numerous projects culminating in technical lead role for
+                                the <a href="http://betteroffted.wikia.com/wiki/Jabberwocky">Jabberwocky project</a> and
+                                promotion to principal developer.</p>
+                             <h5 class="italic">Selected Highlights</h5>
+
+                            <div class="keyline-highlights"></div>
+                            <div class="col-container">
+                                <div class="col-keyline"></div>
+                                <ul class="col">
+                                    <li>Managed a 5-person development team</li>
+                                    <li>Accomplishment 2</li>
+                                    <li>Etc.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                              Stark Industries
+                      </h3>
+
+                                 <h5 class="date pull-right">
+                              <span class="startDate">Oct 2008</span>
+                              <span class="endDate"> - Jun 2011</span>
+                      </h5>
+
+                            </div>
+                             <h4>IT Administrator</h4>
+
+                            <p class="summary">Junior programmer with heavy code responsibilities. Promoted to intermediate
+                                role after 6 months.</p>
+                             <h5 class="italic">Selected Highlights</h5>
+
+                            <div class="keyline-highlights"></div>
+                            <div class="col-container">
+                                <div class="col-keyline"></div>
+                                <ul class="col">
+                                    <li>Promoted to intermediate developer after 6 months</li>
+                                    <li>Accomplishment 2</li>
+                                    <li>Etc.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                              Dunder Mifflin
+                      </h3>
+
+                                 <h5 class="date pull-right">
+                              <span class="startDate">Jun 2008</span>
+                              <span class="endDate"> - Sep 2008</span>
+                      </h5>
+
+                            </div>
+                             <h4>Intern</h4>
+
+                            <p class="summary">Performed IT administration and deployments for Dunder Mifflin.</p>
+                            <h5
+                            class="italic">Selected Highlights</h5>
+                                <div class="keyline-highlights"></div>
+                                <div class="col-container">
+                                    <div class="col-keyline"></div>
+                                    <ul class="col">
+                                        <li>Supervised roll-out of Dunder Mifflin Infinity website.</li>
+                                        <li>Performed mission-critical system backups and</li>
+                                        <li>Etc.</li>
+                                    </ul>
+                                </div>
+                        </section>
+                    </div>
+                    <div class="container education-container">
+                        <div class="title">
+                             <h3>Education</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                    Cornell University
+            </h3>
+
+                                 <h5 class="date pull-right">
+                    <span class="startDate">Sep 2005</span>
+                    <span class="endDate"> - May 2008</span>
+            </h5>
+
+                            </div>
+                             <h4></h4>
+
+                             <h5>3.5</h5>
+
+                            <ul class="two-column">
+                                <li class="two-column">Course 1</li>
+                                <li class="two-column">Course 2</li>
+                                <li class="two-column">Course 2</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                    Medfield College
+            </h3>
+
+                                 <h5 class="date pull-right">
+                    <span class="startDate">Sep 2003</span>
+                    <span class="endDate"> - Jun 2005</span>
+            </h5>
+
+                            </div>
+                             <h4></h4>
+
+                             <h5>3.2</h5>
+
+                            <ul class="two-column">
+                                <li class="two-column">Course 1</li>
+                                <li class="two-column">Course 2</li>
+                                <li class="two-column">Course 2</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="container awards-container">
+                        <div class="title">
+                             <h3>Awards</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                                Honorable Mention
+                        </h3>
+
+                                 <h5 class="date pull-right">
+                                Jan 2012
+                                </h5>
+
+                            </div>
+                             <h5 class="awarder">Google</h5>
+
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                                Summa cum laude
+                        </h3>
+
+                                 <h5 class="date pull-right">
+                                Jan 2012
+                                </h5>
+
+                            </div>
+                             <h5 class="awarder">Cornell University</h5>
+
+                        </section>
+                    </div>
+                    <div class="container volunteer-container">
+                        <div class="title">
+                             <h3>Volunteer</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                            <a href="http://technology-for-tots.org" target="_blank">
+                                Technology for Tots
+                                    <span class="sublink">∙ <a href="http://technology-for-tots.org" target="_blank" class="sublink">http://technology-for-tots.org</a></span>
+                            </a>
+                    </h3>
+
+                                 <h5 class="date pull-right">
+                            <span class="startDate">Nov 2003</span>
+                            <span class="endDate"> - Jun 2005</span>
+                    </h5>
+
+                            </div>
+                             <h5>Technical Consultant</h5>
+
+                            <p class="summary">Summary of this volunteer stint.</p>
+                            <ul>
+                                <li>Accomplishment 1</li>
+                                <li>Accomplishment 2</li>
+                                <li>etc</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                            <a href="http://www.usar.army.mil/" target="_blank">
+                                US Army Reserves
+                                    <span class="sublink">∙ <a href="http://www.usar.army.mil/" target="_blank" class="sublink">http://www.usar.army.mil/</a></span>
+                            </a>
+                    </h3>
+
+                                 <h5 class="date pull-right">
+                            <span class="startDate">Nov 1999</span>
+                            <span class="endDate"> - Jun 2003</span>
+                    </h5>
+
+                            </div>
+                             <h5>NCO</h5>
+
+                            <p class="summary">Summary of this military stint.</p>
+                            <ul>
+                                <li>Accomplishment 1</li>
+                                <li>Accomplishment 2</li>
+                                <li>etc</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="container publications-container">
+                        <div class="title">
+                             <h3>Publications</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                            <a href="http://codeproject.com/build-ui-electron-atom.aspx" target="_blank">
+                                Building User Interfaces with Electron and Atom
+                            </a>
+                    </h3>
+
+                                 <h5 class="date pull-right">
+                            Jan 2011
+                    </h5>
+
+                            </div>
+                             <h5 class="awarder">Code Project</h5>
+
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                            <a href="https://www.janeblogs.com" target="_blank">
+                                Jane Fullstacker&#x27;s Blog
+                            </a>
+                    </h3>
+
+                                 <h5 class="date pull-right">
+                            Jan 2011
+                    </h5>
+
+                            </div>
+                             <h5 class="awarder">self</h5>
+
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+                            <a href="http://url.to.publication.com/blah" target="_blank">
+                                Teach Yourself GORFF in 21 Days
+                            </a>
+                    </h3>
+
+                                 <h5 class="date pull-right">
+                            Jan 2008
+                    </h5>
+
+                            </div>
+                             <h5 class="awarder">Amazon</h5>
+
+                            <p class="summary">A primer on the programming language of GORFF, whose for loops are coterminous
+                                with all of time and space.</p>
+                        </section>
+                    </div>
+                    <div class="container references-container">
+                        <div class="title">
+                             <h3>References</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item clearfix"> <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
+
+                            <blockquote>Jane is awesome! I&#x27;d hire her again in a heartbeat.</blockquote>
+                            <h5
+                            class="pull-right">— John Davidson</h5>
+                        </section>
+                        <section class="item clearfix"> <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
+
+                            <blockquote>I worked with Jane on Jabberwocky and can vouch for her awesome technical
+                                capabilities and attention to detail. Insta-hire.</blockquote>
+                             <h5 class="pull-right"> — Elias Fullstacker</h5>
+
+                        </section>
+                        <section class="item clearfix"> <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
+
+                            <blockquote>I&#x27;ve known Jane personally and professionally for almost ten years.
+                                She is one in a million.</blockquote>
+                             <h5 class="pull-right"> — Dana Nevins</h5>
+
+                        </section>
+                    </div>
+                </div>
+                </div>
+        </main>
+    </body>
+
+</html>
